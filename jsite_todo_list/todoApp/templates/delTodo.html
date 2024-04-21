@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for todo in todoList %} 
+            <li>{{todo}} - <a href="delTodo/{{todo.id}}">удалить</a></li>
+        {% endfor %}
+    </ul> 
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'todoList' %}">Список задач/дел</a></li>
+            <li><a href="{% url 'addTodo' %}">Добавить задачу/дело</a></li>
+            <li><a href="{% url 'home' %}">Для удаления задачи/дела добавьте в адресную строку 'delTodo/id дела/'</a></li>
+            <li><a href="{% url 'home' %}">Для редактирования задачи/дела добавьте в адресную строку 'editTodo/id дела/edit/'</a></li>
+        </ul>
+    </nav>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{title}}</h2>
+    {% if todoList %}
+    <ul>
+        {% for todo in todoList %} 
+            <li>{{todo.id}}: {{todo.textTodo}}</li>
+        {% endfor %}
+    </ul> 
+    {% else %}
+        <p>Список дел пуст</p>
+    {% endif %}
+{% endblock %}
